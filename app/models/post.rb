@@ -1,6 +1,8 @@
 class ClickbaitValidator < ActiveModel::EachValidator
   def clickbait?(record, attribute, value)
     unless value =~ /(Won't Believe|Secret|Top \d|Guess)/
+
+    end
   end
 end
 
