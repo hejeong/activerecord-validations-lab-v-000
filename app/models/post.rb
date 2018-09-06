@@ -7,6 +7,6 @@ class Post < ActiveRecord::Base
 
   def clickbaity?
     clickbait_words = [/Won't Believe/, /Secret/, /Top \d/, /Guess/]
-    if :title.match()
+    if :title.any?(clickbait_words)
   end
 end
