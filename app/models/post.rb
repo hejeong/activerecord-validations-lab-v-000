@@ -1,5 +1,7 @@
-class ClickbaitValidator < ActiveModel::EachValidator 
+class ClickbaitValidator < ActiveModel::EachValidator
+  def clickbait?
 
+  end
 end
 
 class Post < ActiveRecord::Base
@@ -7,5 +9,5 @@ class Post < ActiveRecord::Base
   validates :content, length: { minimum: 250}
   validates :summary, length: { maximum: 250}
   validates :category, inclusion: { in: %w(Fiction Non-Fiction)}
-  validate :title, 
+  validate :title,
 end
